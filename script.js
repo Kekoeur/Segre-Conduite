@@ -1,4 +1,4 @@
-
+// Menu 
 const hamburgerMenu = document.querySelector('.hamburger');
 const nav = document.querySelector('.full-screen-nav');
 const backdrop = document.querySelector('.backdrop');
@@ -22,3 +22,13 @@ subnavbtns.forEach(element => {
         element.nextElementSibling.classList.toggle('display-sub');
     });
 });
+
+// Slider Dark Mode
+
+document.getElementById('input').addEventListener('change', () => {
+    if(document.body.className.indexOf('dark') === -1) {
+        document.body.classList.add('dark');
+    } else {
+        document.body.classList.remove('dark');
+    }
+})

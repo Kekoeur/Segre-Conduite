@@ -2,6 +2,89 @@
 body {
     margin: 0;
     text-align: center;
+    background-color: #c2bed8;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Dark Mode */
+
+.dark {
+    background-color: #2a2734; /* background color in dark mode */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9a86fd;
+    border-radius: 34px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 24px;
+    color: #FCE570;
+    background-color: #80BDE3;
+    content: "\f185";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #ffb870;
+}
+input:checked+.slider::before {
+    content: "\f186";
+    background-color: #000000;
+    color:  #F5F3CE;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #ffb870;
+}
+
+input:checked+.slider::before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
 
 /* Hamburger Menu */
@@ -14,6 +97,7 @@ header {
     border: none;
     outline: none;
     cursor: pointer;
+    margin: 10px;
 }
 
 .hamburger .line {
@@ -138,7 +222,7 @@ ul li a i {
 
 /* IMAGE ACCUEIL */
 .img-accueil {
-    width: 100vw;
+    width: 100%;
 }
 
 /* Divider */
@@ -199,30 +283,6 @@ ul li a i {
     background-color: #05c8f7;
     border-radius: 25px;
 }
-/*
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*:focus,
-*:active {
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent;
-}
-
-html,
-body {
-  display: grid;
-  height: 100%;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-  place-items: center;
-  background: linear-gradient(315deg, #ffffff, #d7e1ec);
-}*/
 
 .wrapper {
   display: inline-flex;

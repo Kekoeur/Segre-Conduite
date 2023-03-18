@@ -12,55 +12,63 @@
 <body>
     <header>
         <button>Espace Elève</button>
-        <div id="hamburger_menu">
-            <button type="button" class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
+        <div class="flex-row">
+            <div class="container">
+                <label class="switch">
+                    <input type="checkbox" name="input" id="input">
+                    <span id="darkmode" class="slider"></span>
+                </label>
+            </div>
+            <div id="hamburger_menu">
+                <button type="button" class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+            <nav class="full-screen-nav">
+                <div class="backdrop"></div>
+                <ul>
+                    <li>
+                        <div class="subnav">
+                            <button class="subnavbtn">Permis <i class="fa fa-caret-down"></i></button>
+                            <ul class="subnav-content">
+                            <li><a class="link-page" href="AM">AM</a></li>
+                            <li><a class="link-page" href="B">B</a></li>
+                            <li><a class="link-page" href="Moto">Moto</a></li>
+                            <li><a class="link-page" href="BE">BE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="subnav">
+                            <button class="subnavbtn">Formations <i class="fa fa-caret-down"></i></button>
+                            <ul class="subnav-content">
+                            <li><a class="link-page" href="Code">Code</a></li>
+                            <li><a class="link-page" href="Post-permis">Permis</a></li>
+                            <li><a class="link-page" href="B96">B96</a></li>
+                            <li><a class="link-page" href="B78">B78</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="subnav">
+                            <button class="subnavbtn">Informations <i class="fa fa-caret-down"></i></button>
+                            <ul class="subnav-content">
+                            <li><a class="link-page" href="Documents">Documents</a></li>
+                            <li><a class="link-page" href="Piste-moto">Piste Moto</a></li>
+                            <li><a class="link-page" href="Avis">Avis</a></li>
+                            <li><a class="link-page" href="PArtenaires">Partenaires</a></li>
+                            <li><a class="link-page" href="A-savoir">A savoir</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="link-page" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav class="full-screen-nav">
-			<div class="backdrop"></div>
-			<ul>
-				<li>
-					<div class="subnav">
-                        <button class="subnavbtn">Permis <i class="fa fa-caret-down"></i></button>
-                        <ul class="subnav-content">
-                          <li><a class="link-page" href="AM">AM</a></li>
-                          <li><a class="link-page" href="B">B</a></li>
-                          <li><a class="link-page" href="Moto">Moto</a></li>
-                          <li><a class="link-page" href="BE">BE</a></li>
-                        </ul>
-                    </div>
-				</li>
-				<li>
-                    <div class="subnav">
-                        <button class="subnavbtn">Formations <i class="fa fa-caret-down"></i></button>
-                        <ul class="subnav-content">
-                          <li><a class="link-page" href="Code">Code</a></li>
-                          <li><a class="link-page" href="Post-permis">Permis</a></li>
-                          <li><a class="link-page" href="B96">B96</a></li>
-                          <li><a class="link-page" href="B78">B78</a></li>
-                        </ul>
-                    </div>
-				</li>
-				<li>
-					<div class="subnav">
-                        <button class="subnavbtn">Informations <i class="fa fa-caret-down"></i></button>
-                        <ul class="subnav-content">
-                          <li><a class="link-page" href="Documents">Documents</a></li>
-                          <li><a class="link-page" href="Piste-moto">Piste Moto</a></li>
-                          <li><a class="link-page" href="Avis">Avis</a></li>
-                          <li><a class="link-page" href="PArtenaires">Partenaires</a></li>
-                          <li><a class="link-page" href="A-savoir">A savoir</a></li>
-                        </ul>
-                    </div>
-				</li>
-				<li>
-					<a class="link-page" href="#">Contact</a>
-				</li>
-			</ul>
-		</nav>
     </header>
     <img class="img-accueil" src="img/vitrine.jpg" alt="Vitrine de Segré Conduite">
     <section>
@@ -143,7 +151,7 @@
             <li><p>ASSR2</p></li>
             <li><p>Un numéro de portable et une adresse mail</p></li>
         </ul>
-        <p>Vous pouvez nous fournir ces documents en copies, par mail ou sur clé USB, regroupés dans un format Jpeg, bmp ou pdf. Nous serons ravis de vous accueillir et de vous aider à réaliser vos projets de conduite !</p>
+        <p>Vous pouvez nous fournir ces documents en copies, par mail ou sur clé USB, regroupés dans un format JPEG, BMP ou PDF. Nous serons ravis de vous accueillir et de vous aider à réaliser vos projets de conduite !</p>
     </section>
 
     <section>
