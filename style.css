@@ -1,0 +1,300 @@
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+/* Hamburger Menu */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.hamburger {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: currentColor;
+    margin-block: 10px;
+    border-radius: 4px;
+    transition: transform .5s, opacity .25s;
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+/* Full screen nav */
+.full-screen-nav {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transition: 0.2s ease-in-out;
+	display: none;
+}
+.open-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.backdrop {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.92);
+	cursor: pointer;
+	animation: fadeIn 0.2s ease-in-out forwards;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Style link page menu */
+ul {
+	z-index: 9999;
+	position: relative;
+}
+ul li {
+	list-style: none;
+	text-align: center;
+	margin-bottom: 30px;
+	animation: 0.25s ease-in-out animateList forwards;
+}
+ul li:last-child {
+	margin-bottom: 0;
+}
+@keyframes animateList {
+	from {
+		margin-top: -60px;
+		opacity: 0;
+	}
+	to {
+		margin-top: 0;
+		opacity: 1;
+	}
+}
+ul li .link-page, .subnavbtn {
+	text-decoration: none;
+	color: #ccc;
+	font-size: 3rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	transition: 0.15s ease-in-out;
+}
+ul li .link-page:hover,
+ul li a i {
+	color: #ffa500;
+}
+  
+  /* Subnav button */
+  .subnav .subnavbtn {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+ 
+  /* Style the subnav content - positioned absolute */
+  .subnav-content {
+    display: none;
+    left: 0;
+    padding: 0;
+    background-color: red;
+    width: 100%;
+    z-index: 1;
+    animation: 0.25s ease-in-out animateList forwards;
+  }
+  .subnav-content.display-sub {
+    display: block;
+  }
+  
+  /* Add a grey background color on hover */
+  .subnav-content .link-page:hover {
+    background-color: #eee;
+    color: black;
+  }
+
+/* IMAGE ACCUEIL */
+.img-accueil {
+    width: 100vw;
+}
+
+/* Divider */
+
+.divider {
+    margin:8px auto;
+    width:300px; 
+    max-width: 100%;
+    position:relative;
+}
+
+.dividermask { 
+    overflow:hidden; height:20px; 
+}
+
+.dividermask:after { 
+    content:''; 
+    display:block; margin:-25px auto 0;
+    width:100%; height:25px;  
+    border-radius:125px / 12px;
+    box-shadow:0 0 8px #049372;
+}
+.divider span {
+    width:30px; height:30px; 
+    position:absolute; 
+    bottom:100%; margin-bottom:-15px;
+    left:50%; margin-left:-15px;
+    border-radius:100%;
+    box-shadow:0 2px 4px #4fb39c;
+    background:#fff;
+}
+.divider i {
+    font-size: 13px;
+    position:absolute;
+    top:2px; bottom:2px;
+    left:2px; right:2px;
+    border-radius:100%;
+    border:1px dashed #68beaa;
+    text-align:center;
+    line-height:25px;
+    font-style:normal;
+    color:#049372;
+}
+
+/* GPS */ 
+
+.logo * {
+    margin: 10px;
+}
+.logo .maps-logo{
+    width: 50px;
+    height: 50px;
+}
+.logo .waze-logo{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: #05c8f7;
+    border-radius: 25px;
+}
+/*
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+}*/
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .waze:hover,
+.wrapper .waze:hover .tooltip,
+.wrapper .waze:hover .tooltip::before {
+  background: #05c8f7;
+  color: #ffffff;
+}
+
+.wrapper .maps:hover,
+.wrapper .maps:hover .tooltip,
+.wrapper .maps:hover .tooltip::before {
+  background: #767676;
+  color: #ffffff;
+}
