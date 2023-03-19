@@ -1,13 +1,13 @@
-:root {
-    --base-grid: 8px;
-    --colour-white: #fff;
-    --colour-black: #1a1a1a;
-}
-
 body {
     margin: 0;
     text-align: center;
-    background-color: #c2bed8;
+    --colorMain: white;
+    --colorSecondary: blue;
+    --colorMainComplement: red;
+    --colorSecondaryComplement: yellow;
+    --colorFont: black;
+    background-color: var(--colorMain);
+    color: var(--colorFont);
 }
 
 .flex-row {
@@ -18,7 +18,11 @@ body {
 /* Dark Mode */
 
 .dark {
-    background-color: #2a2734; /* background color in dark mode */
+    --colorMain: green;
+    --colorSecondary: black;
+    --colorMainComplement: purple;
+    --colorSecondaryComplement: orange;
+    --colorFont: white /* background color in dark mode */
 }
 
 .container {
@@ -393,6 +397,33 @@ section {
     flex-direction: column;
 }
 
+section:nth-child(even), section:nth-child(odd) .bigTriangleShadow {
+  background-color: var(--colorMain);
+}
+
+section:nth-child(odd), section:nth-child(even) .bigTriangleShadow{
+  background-color: var(--colorSecondary);
+}
+
+section:nth-child(even) .trianglePath1 {
+  fill: var(--colorMain);
+  stroke: var(--colorMain);
+}
+
+section:nth-child(even) .trianglePath2 {
+  fill: var(--colorMainComplement);
+  stroke: var(--colorMainComplement);
+}
+
+section:nth-child(odd) .trianglePath1 {
+  fill: var(--colorSecondary);
+  stroke: var(--colorSecondary);
+}
+
+section:nth-child(odd) .trianglePath2 {
+  fill: var(--colorSecondaryComplement);
+  stroke: var(--colorSecondaryComplement);
+}
 /* Table */
 
 table {
@@ -418,134 +449,8 @@ table {
     border-bottom: 1px solid #000000;
 }
 
-/* Prestation */
+/* Prestations */
 
-.links {
-    --link-size: calc(var(--base-grid)*20);
-    color: var(--colour-black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-  }
-  
-  .links__list {
-    position: relative;
-    list-style: none;
-  }
-  
-  .links__item {
-    width: var(--link-size);
-    height: var(--link-size);
-    padding: 2px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: calc(var(--link-size)/-2);
-    margin-left: calc(var(--link-size)/-2);
-    --angle: calc(360deg/var(--item-total));
-    --rotation: calc(140deg + var(--angle)*var(--item-count));
-    transform: rotate(var(--rotation)) translate(calc(var(--link-size) + var(--base-grid)*12)) rotate(calc(var(--rotation)*-1));
-  }
-  
-  .links__link {
-    opacity: 0;
-    animation: on-load .3s ease-in-out forwards;
-    animation-delay: calc(var(--item-count)*150ms);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: relative;
-    background-color: var(--colour-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .links__icon {
-    width: calc(var(--base-grid)*16);
-    height: calc(var(--base-grid)*16);
-    transition: all .3s ease-in-out;
-    fill: var(--colour-black);
-  }
-  
-  .links__text {
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    left: calc(var(--base-grid)*-var(--item-total));
-    top: calc(-1*var(--base-grid)*var(--item-total));
-    text-align: center;
-    height: 40vw;
-    width: 40vw;
-    border: 1px solid black;
-    border-radius: 50%;
-    font-size: calc(var(--base-grid)*4);
-    display: none;
-    bottom: calc(var(--base-grid)*8.5);
-    padding: 2px;
-    animation: text .3s ease-in-out forwards;
-  }
-  
-  .links__link:after {
-    content: "";
-    background-color: transparent;
-    width: var(--link-size);
-    height: var(--link-size);
-    border: 2px dashed var(--colour-white);
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .3s cubic-bezier(.53,-.67,.73,.74);
-    transform: none;
-    opacity: 0;
-  }
-  
-  .links__link:hover .links__icon {
-    transition: all .3s ease-in-out;
-    transform: translateY(calc(var(--base-grid)*-1));
-  }
-  
-  .links__link:hover .links__text {
-    display: flex;
-  }
-  
-  .links__link:hover:after {
-    transition: all .3s cubic-bezier(.37,.74,.15,1.65);
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  
-  @keyframes on-load {
-    0% {
-      opacity: 0;
-      transform: scale(.3);
-    }
-    70% {
-      opacity: .7;
-      transform: scale(1.1);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes text {
-    0% {
-      opacity: 0;
-      transform: scale(0.3) translateY(0);
-    }
-    100% {
-      opacity: 1;
-      --angle: calc(360deg/var(--item-total));
-      --rotation: calc(140deg + var(--angle)*var(--item-count));
-      transform: rotate(calc(var(--rotation)*1)) translate(calc(var(--link-size)*-1 - var(--base-grid)*12)) rotate(calc(var(--rotation)*-1));
-    }
-  }
+.links__icon {
+  width: 50px;
+}
