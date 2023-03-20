@@ -1,4 +1,6 @@
 {
+    "name": "App/Segré Conduite",
+    "description": "Segré Conduite",
     "require": {
         "weboap/visitor": "^2.0"
     },
