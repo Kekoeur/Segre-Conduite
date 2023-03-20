@@ -1,6 +1,7 @@
 {
     "name": "app/segreconduite",
     "description": "Segré Conduite",
+    "license": "proprietary",
     "require": {
         "weboap/visitor": "^2.0"
     },
