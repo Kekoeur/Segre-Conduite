@@ -1,0 +1,1 @@
+<img class="img-accueil" src="<?php echo $domain ?>/assets/img/page-header-bg.jpg" alt="Segré Conduite">

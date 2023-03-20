@@ -1,76 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Segré Conduite</title>
-</head>
-<body>
-    <header>
-        <button>Espace Elève</button>
-        <div class="flex-row">
-            <div class="container">
-                <label class="switch">
-                    <input type="checkbox" name="input" id="input">
-                    <span id="darkmode" class="slider"></span>
-                </label>
-            </div>
-            <div id="hamburger_menu">
-                <button type="button" class="hamburger">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
-            </div>
-            <nav class="full-screen-nav">
-                <div class="backdrop"></div>
-                <ul>
-                    <li>
-                        <div class="subnav">
-                            <button class="subnavbtn">Permis <i class="fa fa-caret-down"></i></button>
-                            <ul class="subnav-content">
-                            <li><a class="link-page" href="AM">AM</a></li>
-                            <li><a class="link-page" href="B">B</a></li>
-                            <li><a class="link-page" href="Moto">Moto</a></li>
-                            <li><a class="link-page" href="BE">BE</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="subnav">
-                            <button class="subnavbtn">Formations <i class="fa fa-caret-down"></i></button>
-                            <ul class="subnav-content">
-                            <li><a class="link-page" href="Code">Code</a></li>
-                            <li><a class="link-page" href="Post-permis">Permis</a></li>
-                            <li><a class="link-page" href="B96">B96</a></li>
-                            <li><a class="link-page" href="B78">B78</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="subnav">
-                            <button class="subnavbtn">Informations <i class="fa fa-caret-down"></i></button>
-                            <ul class="subnav-content">
-                            <li><a class="link-page" href="Documents">Documents</a></li>
-                            <li><a class="link-page" href="Piste-moto">Piste Moto</a></li>
-                            <li><a class="link-page" href="Avis">Avis</a></li>
-                            <li><a class="link-page" href="PArtenaires">Partenaires</a></li>
-                            <li><a class="link-page" href="A-savoir">A savoir</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a class="link-page" href="#">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <img class="img-accueil" src="img/vitrine.jpg" alt="Vitrine de Segré Conduite">
+<?php
+
+require_once($_SERVER['DOCUMENT_ROOT'].'/SegréConduite/public/includes/var.php');
+$pageName = "Acceuil";
+require_once (__DIR__ . '/includes/header.php');
+
+?>
+<img class="img-accueil" src="<?php echo $domain ?>/assets/img/vitrine.jpg" alt="Vitrine de Segré Conduite">
     <section>
         <h1>Segre Conduite</h1>
         <div class="divider"><div class="dividermask"></div><span><i class="fa-solid fa-car-side"></i></span></div>
@@ -119,11 +54,11 @@
         <ul class="wrapper">
             <li class="icon waze">
               <span class="tooltip">Waze</span>
-              <span><a class="logo button-s" href="https://ul.waze.com/ul?place=ChIJGxSeFdSTCEgRWJPrG9Jn04I&ll=47.68385250%2C-0.87132210&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" rel="noopener noreferrer"><img src="img/logo/waze-icon.svg" alt="Logo Waze" class="waze-logo"></a></span>
+              <span><a class="logo button-s" href="https://ul.waze.com/ul?place=ChIJGxSeFdSTCEgRWJPrG9Jn04I&ll=47.68385250%2C-0.87132210&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" rel="noopener noreferrer"><img src="assets/img/logo/waze-icon.svg" alt="Logo Waze" class="waze-logo"></a></span>
             </li>
             <li class="icon maps">
               <span class="tooltip">Google Maps</span>
-              <span><a class="logo button-s" href="https://goo.gl/maps/KUAdjCRGJYwBWdbVA" target="_blank" rel="noopener noreferrer"><img src="img/logo/google-maps-2020-icon.svg" alt="Logo Google Maps" class="maps-logo"></a></span>
+              <span><a class="logo button-s" href="https://goo.gl/maps/KUAdjCRGJYwBWdbVA" target="_blank" rel="noopener noreferrer"><img src="assets/img/logo/google-maps-2020-icon.svg" alt="Logo Google Maps" class="maps-logo"></a></span>
             </li>
         </ul>
         <svg class="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -141,55 +76,55 @@
             <ul class="links__list" style="--item-total:9">
                 <li class="links__item" style="--item-count:1">
                     <a class="links__link" href="#">
-                        <img class="links__icon" src="img/logo/Permis-B.png" alt="Logo Permis B">
+                        <img class="links__icon" src="assets/img/logo/Permis-B.png" alt="Logo Permis B">
                         <span class="links__text">Permis B</span>
                     </a>
                 </li>
                 <li class="links__item" style="--item-count:2">
                     <a class="links__link" href="#">
-                        <img class="links__icon" src="img/logo/permis-moto.png" alt="Logo Permis Moto">
+                        <img class="links__icon" src="assets/img/logo/permis-moto.png" alt="Logo Permis Moto">
                         <span class="links__text">Permis Moto</span>
                     </a>
                 </li>
                 <li class="links__item" style="--item-count:3">
                     <a class="links__link" href="#">
-                        <img class="links__icon" src="img/logo/Permis-AM.png" alt="Logo Permis AM">
+                        <img class="links__icon" src="assets/img/logo/Permis-AM.png" alt="Logo Permis AM">
                         <span class="links__text">Permis AM (BSR)</span>
                     </a>
                 </li>
                 <li class="links__item" style="--item-count:4">
                     <a class="links__link" href="#">
-                        <img class="links__icon" src="img/logo/Permis-B96.png" alt="Logo Permis B96">
+                        <img class="links__icon" src="assets/img/logo/Permis-B96.png" alt="Logo Permis B96">
                         <span class="links__text">Permis B96</span>
                     </a>
                 </li>
                 <li class="links__item" style="--item-count:5">
                     <a class="links__link" href="#">
-                        <img class="links__icon" src="img/logo/conduite-supervisé.png" alt="Logo Conduite supervisée">
+                        <img class="links__icon" src="assets/img/logo/conduite-supervisé.png" alt="Logo Conduite supervisée">
                         <span class="links__text">Conduite supervisée</span>
                     </a>
                 </li>
                 <li class="links__item" style="--item-count:6">
                     <a class="links__link" href="#">
-                        <img class="links__icon" src="img/logo/conduite_accompagnée.png" alt="Logo Conduite accompagnée">
+                        <img class="links__icon" src="assets/img/logo/conduite_accompagnée.png" alt="Logo Conduite accompagnée">
                         <span class="links__text">Conduite accompagnée</span>
                     </a>
                 </li>
                 <li class="links__item" style="--item-count:7">
                     <a class="links__link" href="#">
-                        <img class="links__icon" src="img/logo/AAC_logo.png" alt="Logo Tests psychotechniques">
+                        <img class="links__icon" src="assets/img/logo/AAC_logo.png" alt="Logo Tests psychotechniques">
                         <span class="links__text">Tests psychotechniques</span>
                     </a>
                 </li>
                 <li class="links__item" style="--item-count:8">
                     <a class="links__link" href="#">
-                        <img class="links__icon" src="img/logo/code.png" alt="Logo Code">
+                        <img class="links__icon" src="assets/img/logo/code.png" alt="Logo Code">
                         <span class="links__text">Code en ligne</span>
                     </a>
                 </li>
                 <li class="links__item" style="--item-count:9">
                     <a class="links__link" href="#">
-                        <img class="links__icon" src="img/logo/stage-code.png" alt="Logo Stage code">
+                        <img class="links__icon" src="assets/img/logo/stage-code.png" alt="Logo Stage code">
                         <span class="links__text">Stage code intensif</span>
                     </a>
                 </li>
@@ -234,8 +169,18 @@
             <li><p>Formation code sur tablettes "comme à l'examen" dans nos locaux</p></li>
         </ul>
         <p>Notre auto-école vous propose une formation complète et adaptée à votre rythme pour vous permettre de réussir votre examen de code. Les cours sont dispensés par des formateurs qualifiés qui seront là pour vous aider à progresser et répondre à toutes vos questions. Avec nos cours en ligne, vous pourrez travailler le code chez vous à votre rythme, avec l'aide et le suivi de nos formateurs. Rejoignez-nous pour une formation de qualité !</p>
+        <svg class="bigTriangleShadow" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path class="trianglePath1" d="M0 0 L50 100 L100 0 Z" />
+            <path class="trianglePath2" d="M50 100 L100 40 L100 0 Z" />
+        </svg>
     </section>
 
     <div class="route"></div>
+
+    <?php
+
+    require_once (__DIR__ . '/includes/footer.php');
+
+    ?>
 </body>
 </html>
