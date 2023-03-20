@@ -1,7 +1,7 @@
 <?php
 
 require_once($_SERVER['DOCUMENT_ROOT'].'/SegréConduite/public/includes/var.php');
-$pageName = "Documents";
+$pageName = "Permis AM";
 require_once (__DIR__ . '/../includes/header.php');
 require_once(__DIR__.'/../includes/page_header.php');
 
